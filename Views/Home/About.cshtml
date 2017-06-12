@@ -1,0 +1,31 @@
+﻿@model IEnumerable<AppServiceDemo1.Models.CustomerModel>
+@{
+    ViewData["Title"] = "About";
+}
+
+<h2>@ViewData["Title"].</h2>
+<h3>@ViewData["Message"]</h3>
+
+<p>Use this area to provide additional information.</p>
+
+<table>
+    <thead>
+        <tr>
+            <th>Last Name</th>
+            <th>First Name</th>
+            <th>Company</th>
+            <th>Email</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var customer in Model)
+        {
+        <tr>
+            <td>@customer.LastName</td>
+            <td>@customer.FirstName</td>
+            <td>@customer.CompanyName</td>
+            <td>@customer.EmailAddress</td>
+        </tr>
+        }
+    </tbody>        
+</table>
